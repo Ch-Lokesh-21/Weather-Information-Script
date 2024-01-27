@@ -27,7 +27,6 @@ try:
                 print(f"Humidity in {CITY} is: {data['main']['humidity']}%")
                 print(f"Wind speed in {CITY} is: {wind_speed_kmph} kmph")
                 print(f"Pressure in {CITY} is: {data['main']['pressure']} mb")
-                # print(data)
         except requests.RequestException as req_error:
             print(f"Error during API request: {req_error}")
         except Exception as e:
@@ -36,4 +35,3 @@ except FileNotFoundError:
     print("API Key file not found.")
 except Exception as e:
     print(f"An error occurred: {e}")
-    
